@@ -336,7 +336,7 @@ lobstr::ast("foo"())
 
 However, sometimes the function doesn't exist in the current environment and you need to do some computation to retrieve it: for example, if the function is in another package, is a method of an R6 object, or is created by a function factory. In this case, the function position will be occupied by another call:
 
-```{r}
+```{r renv.ignore = TRUE}
 lobstr::ast(pkg::foo(1))
 lobstr::ast(obj$foo(1))
 lobstr::ast(foo(1)(2))

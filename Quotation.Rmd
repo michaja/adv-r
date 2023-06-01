@@ -427,7 +427,7 @@ expr((!!f)(x, y))
 
 This also works when `f` is a call:
 
-```{r}
+```{r renv.ignore = TRUE}
 f <- expr(pkg::foo)
 expr((!!f)(x, y))
 ```
@@ -438,7 +438,7 @@ knitr::include_graphics("diagrams/quotation/fun.png")
 
 Because of the large number of parentheses involved, it can be clearer to use `rlang::call2()`:
 
-```{r}
+```{r renv.ignore = TRUE}
 f <- expr(pkg::foo)
 call2(f, expr(x), expr(y))
 ```
